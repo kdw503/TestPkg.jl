@@ -10,6 +10,9 @@ if !any(LOAD_PATH .== thisdir)
     push!(LOAD_PATH, thisdir)
 end
 
+function testfunc()
+    println("testfunc")
+end
 #=
 using Reexport
 @reexport using SubPkg1
