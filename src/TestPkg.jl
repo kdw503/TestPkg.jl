@@ -4,6 +4,7 @@ TestPkg tests several small code
 """
 TestPkg
 
+using BoxTrees
 
 thisdir = splitdir(@__FILE__)[1]
 if !any(LOAD_PATH .== thisdir)
