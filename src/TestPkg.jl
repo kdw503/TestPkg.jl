@@ -27,8 +27,8 @@ function testpkg()
     subfn1()
 end
 =#
-function foo(a)
-    println(a)
+function foo(a,b)
+    println(a+b)
 end
 
 end
