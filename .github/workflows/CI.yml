@@ -48,7 +48,7 @@ jobs:
             ${{ runner.os }}-
       - name: echo matrix.os
         run: echo ${{matrix.os}} 
-      - name: registry_add(ubunto)
+      - name: registry_add(ubuntu)
         if: ${{matrix.os == 'ubunto-latest'}}
         run: julia -e 'using Pkg; pkg"registry add General https://github.com/HolyLab/HolyLabRegistry.git"'
       - name: registry_add(windows)
