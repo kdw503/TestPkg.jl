@@ -21,9 +21,9 @@ jobs:
           - x64
     steps:
       - uses: actions/checkout@v2
-      - uses: webfactory/ssh-agent@v0.4.1
-        with:
-            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+#       - uses: webfactory/ssh-agent@v0.4.1
+#         with:
+#             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 #      - name: Setup SSH Keys and known_hosts
 #         env:
 #           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
@@ -46,6 +46,8 @@ jobs:
             ${{ runner.os }}-test-${{ env.cache-name }}-
             ${{ runner.os }}-test-
             ${{ runner.os }}-
+      - name: echo matrix.os
+        run: echo ${{matrix.os}} 
       - name: registry_add(ubunto)
         if: \${{matrix.os == 'ubunto-latest'}}
         run: julia -e 'using Pkg; pkg"registry add General https://github.com/HolyLab/HolyLabRegistry.git"'
