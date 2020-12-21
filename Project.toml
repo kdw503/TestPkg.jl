@@ -4,4 +4,10 @@ authors = ["Dae Woo Kim <kdw503@wustl.edu>"]
 version = "0.0.0"
 
 [deps]
+BoxTrees = "9cc36475-e10c-57f8-b33d-19dcb253ebc3"
+
+[extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
