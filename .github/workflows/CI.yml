@@ -49,7 +49,7 @@ jobs:
       - name: echo matrix.os
         run: echo ${{matrix.os}} 
       - name: registry_add(ubuntu)
-        if: ${{matrix.os == 'ubunto-latest'}}
+        if: ${{matrix.os == 'ubuntu-latest'}}
         run: julia -e 'using Pkg; pkg"registry add General https://github.com/HolyLab/HolyLabRegistry.git"'
       - name: registry_add(windows)
         if: ${{matrix.os == 'windows-latest'}}
