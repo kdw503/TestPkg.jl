@@ -53,7 +53,7 @@ jobs:
         run: julia -e 'using Pkg; pkg"registry add General https://github.com/HolyLab/HolyLabRegistry.git"'
       - name: registry_add(windows)
         if: ${{matrix.os == 'windows-latest'}}
-        run: julia -e "using Pkg; pkg\"registry add General https://github.com/HolyLab/HolyLabRegistry.git\";"
+        run: julia -e "using Pkg; Pkg.Registry.add(RegistrySpec(url=\"https://github.com/HolyLab/HolyLabRegistry.git\")); "
       - uses: julia-actions/julia-buildpkg@v1
 #        env:
 #            SSH_AUTH_SOCK: /tmp/ssh_agent.sock
