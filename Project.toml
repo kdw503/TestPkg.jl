@@ -1,7 +1,7 @@
 name = "TestPkg"
 uuid = "cd2a8086-c8df-11e8-3fc2-5755b5e60617"
 authors = ["Dae Woo Kim <kdw503@wustl.edu>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 BoxTrees = "9cc36475-e10c-57f8-b33d-19dcb253ebc3"
