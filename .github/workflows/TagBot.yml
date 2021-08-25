@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   TagBot:
-    runs-on: ubuntu-latestcd ..
+    runs-on: ubuntu-latest
     steps:
       - name: Event Information
         run: |
