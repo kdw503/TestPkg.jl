@@ -31,4 +31,8 @@ function foo(a,b)
     println(a+b)
 end
 
+function bar(a,b)
+    println(a-b)
+end
+
 end
